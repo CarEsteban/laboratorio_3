@@ -3,11 +3,12 @@ public class Dulce extends Producto {
     boolean esDietetico;
     
     
-    public Dulce(int iD, int cant_disponibles, int precio, int comision, String nombre, boolean esDietetico) {
+    public Dulce(int iD, int cant_disponibles, int precio, double comision, String nombre, boolean esDietetico) {
         super(iD, cant_disponibles, precio, comision, nombre);
         this.esDietetico=esDietetico;
         categoria="Dulce";
     }
+
 
     public void setEstado(boolean estado) {
         this.estado = estado;
@@ -45,7 +46,7 @@ public class Dulce extends Producto {
         return precio;
     }
 
-    public int getComision() {
+    public double getComision() {
         return comision;
     }
 

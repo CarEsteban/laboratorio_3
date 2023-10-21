@@ -4,7 +4,7 @@ public class Snack extends Producto {
     String sabor, tamanio;
     
     
-    public Snack(int iD, int cant_disponibles, int precio, int comision, String nombre, int gramos, String sabor, String tamanio) {
+    public Snack(int iD, int cant_disponibles, int precio, double comision, String nombre, int gramos, String sabor, String tamanio) {
         super(iD, cant_disponibles, precio, comision, nombre);
         this.gramos=gramos;
         this.sabor=sabor;
@@ -48,7 +48,7 @@ public class Snack extends Producto {
         return precio;
     }
 
-    public int getComision() {
+    public double getComision() {
         return comision;
     }
 

@@ -4,7 +4,7 @@ public class Bebida extends Producto {
     String tipo;
     
     
-    public Bebida(int iD, int cant_disponibles, int precio, int comision, String nombre, int mililitros, String tipo) {
+    public Bebida(int iD, int cant_disponibles, int precio, double comision, String nombre, int mililitros, String tipo) {
         super(iD, cant_disponibles, precio, comision, nombre);
         this.mililitros=mililitros;
         this.tipo=tipo;
@@ -47,7 +47,7 @@ public class Bebida extends Producto {
         return precio;
     }
 
-    public int getComision() {
+    public double getComision() {
         return comision;
     }
 

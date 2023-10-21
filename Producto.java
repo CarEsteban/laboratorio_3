@@ -1,8 +1,9 @@
 public abstract class Producto {
-    int ID, cant_disponibles, cant_vendidos, precio, comision;
+    int ID, cant_disponibles, cant_vendidos, precio;
+    double comision;
     String nombre, pais, categoria;
     boolean estado;
-    public Producto(int iD, int cant_disponibles, int precio, int comision, String nombre) {
+    public Producto(int iD, int cant_disponibles, int precio, double comision, String nombre) {
         this.ID = iD;
         this.cant_disponibles = cant_disponibles;
         this.precio = precio;
@@ -27,7 +28,7 @@ public abstract class Producto {
 
     public abstract int getPrecio();
 
-    public abstract int getComision();
+    public abstract double getComision();
 
     public abstract String getCategoria();
 

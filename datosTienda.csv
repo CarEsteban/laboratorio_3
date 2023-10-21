@@ -1,0 +1,8 @@
+﻿id_producto,nombre,cantidad_disponible,cantidad_vendidos,estado,precio,categoria,ml,tipo,gramos,sabor,tamanio,dietetico
+101,Chocolate,4,0,true,7,Dulce,-,-,-,-,-,true
+201,Maiz chino,3,0,true,5,Snack,-,-,100,Picante,Individual,-
+301,Gatorade,5,0,true,10,Bebida,100,Energetica,-,-,-,-
+102,Hershey,10,0,true,8,Dulce,-,-,-,-,-,true
+302,RedBull,10,0,true,12,Bebida,150,Energetica,-,-,-,-
+103,ChiclesZ,4,0,true,1,Dulce,-,-,-,-,-,false
+202,PapitasZ,3,0,true,15,Snack,-,-,20,Salado,Individual,-
