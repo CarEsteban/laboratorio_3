@@ -52,17 +52,20 @@ public class Dulce extends Producto {
     public String getCategoria() {
         return categoria;
     }
-    
-    public boolean EsDietetico() {
-        return esDietetico;
+
+    public String EsDietetico() {
+        if(esDietetico){
+            return "El producto es dietético";
+        }else{
+            return "El producto NO es dietético";
+        }
     }
 
 
     @Override
     public String toString() {
-        return "Producto [ID=" + ID + ", cant_disponibles=" + cant_disponibles + ", cant_vendidos=" + cant_vendidos
-                + ", precio=" + precio + ", comision=" + comision + ", nombre=" + nombre + ", pais=" + pais
-                + ", categoria=" + categoria + ", estado=" + estado + "]";
+        return super.toString() + 
+               ", Es dieteico: " + this.EsDietetico() ;
     }
 
     

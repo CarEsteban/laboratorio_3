@@ -31,12 +31,19 @@ public abstract class Producto {
 
     public abstract String getCategoria();
 
-    @Override
+    
     public String toString() {
-        return "Producto [ID=" + ID + ", cant_disponibles=" + cant_disponibles + ", cant_vendidos=" + cant_vendidos
-                + ", precio=" + precio + ", comision=" + comision + ", nombre=" + nombre + ", pais=" + pais
-                + ", categoria=" + categoria + ", estado=" + estado + "]";
+        return "ID: " + ID +
+               ", Nombre: " + nombre +
+               ", País: " + pais +
+               ", Categoría: " + categoria +
+               ", Cantidad Disponibles: " + cant_disponibles +
+               ", Cantidad Vendidos: " + cant_vendidos +
+               ", Precio: " + precio +
+               ", Comisión: " + comision +
+               ", Estado: " + estado;
     }
+    
 
     
 

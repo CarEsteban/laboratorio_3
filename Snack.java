@@ -69,11 +69,13 @@ public class Snack extends Producto {
         return tamanio;
     }
 
+
     @Override
     public String toString() {
-        return "Producto [ID=" + ID + ", cant_disponibles=" + cant_disponibles + ", cant_vendidos=" + cant_vendidos
-                + ", precio=" + precio + ", comision=" + comision + ", nombre=" + nombre + ", pais=" + pais
-                + ", categoria=" + categoria + ", estado=" + estado + "]";
+        return super.toString() + 
+               ", Gramos: " + this.gramos +
+               ", Sabor: " + this.sabor + 
+               ", Tamaño: " + this.tamanio ;
     }
 
 
