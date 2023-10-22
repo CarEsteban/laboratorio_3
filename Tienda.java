@@ -274,7 +274,7 @@ public class Tienda{
         scanner.nextLine();
         if (opcion == 0) {
             if(eleccion.equals(" al menú? ")){
-                System.out.println("Saliendo del programa....");
+                System.out.println("Saliendo del programa.");
                 return false;
             }else{
                 System.out.println("Saliendo de la opción.");
