@@ -12,9 +12,10 @@ public class Tienda{
         
         //Declaracion de variables a usar
         ArrayList<Producto> productos = new ArrayList<>();
+        Venta caja = new Venta();
         Scanner scan = new Scanner(System.in);
         boolean continuar=true,continuarSubmenu=true, productoEncontrado;
-        int menu, subMenu, ID_buscado;
+        int menu, ID_buscado,cantidadProductos=0;
         File archivo = new File("datosTienda.csv");
 
 
@@ -72,13 +73,64 @@ public class Tienda{
                         
                     break;
                 case 2:
-                   
+                    System.out.println("Listado de categorías con total de productos");
+                        System.out.print("Dulce - ");
+                        for (Producto producto : productos) {
+                            if(producto.getCategoria().equals("Dulce")){
+                                cantidadProductos += producto.getDisponibles();
+
+                            }
+                        }
+                        System.out.println(cantidadProductos);
+                        cantidadProductos=0;
+                        System.out.print("Snack - ");
+                        for (Producto producto : productos) {
+                            if(producto.getCategoria().equals("Snack")){
+                                cantidadProductos += producto.getDisponibles();
+
+                            }
+                        }
+                        System.out.println(cantidadProductos);
+                        cantidadProductos=0;
+                        System.out.print("Bebida - ");
+                        for (Producto producto : productos) {
+                            if(producto.getCategoria().equals("Bebida")){
+                                cantidadProductos += producto.getDisponibles();
+
+                            }
+                        }
+                        System.out.println(cantidadProductos);
 
                     break;
-                case 3:       
+                case 3:   
+                    System.out.println("Listado de productos por categoría");
+                    System.out.println("Categoría Dulce:");
+                    for (Producto producto : productos) {
+                        if(producto.getCategoria().equals("Dulce")){
+                            System.out.println("\t"+producto.getNombre());
+
+                        }
+                    }
+                    System.out.println("Categoría Snack:");
+                    for (Producto producto : productos) {
+                        if(producto.getCategoria().equals("Snack")){
+                            System.out.println("\t"+producto.getNombre());
+
+                        }
+                    }
+
+                    System.out.println("Categoría Bebida:");
+                    for (Producto producto : productos) {
+                        if(producto.getCategoria().equals("Bebida")){
+                            System.out.println("\t"+producto.getNombre());
+
+                        }
+                    }
+    
                     break;
                 case 4:
-                   
+                    System.out.println("INFORME DE CAJA");
+
 
                     break;
                 case 5:
