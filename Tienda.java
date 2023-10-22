@@ -15,7 +15,7 @@ public class Tienda{
         Venta caja = new Venta();
         Scanner scan = new Scanner(System.in);
         boolean continuar=true,continuarSubmenu=true, productoEncontrado;
-        int menu, ID_buscado,cantidadProductos=0;
+        int menu,total, ID_buscado,cantidadProductos=0;
         File archivo = new File("datosTienda.csv");
 
 
@@ -130,7 +130,34 @@ public class Tienda{
                     break;
                 case 4:
                     System.out.println("INFORME DE CAJA");
+                    total=0;
+                    for (Producto producto : productos) {
+                        total += (producto.getPrecio()*producto.getDisponibles());
+                    }
+                    caja.setTotal(total, 0,  null);
+                    total=0;
+                    for (Producto producto : productos) {
+                        if(producto.getCategoria().equals("Snack")){
+                            total = (producto.getPrecio()*producto.getDisponibles());
+                            caja.setTotal(total, 0, "Snack");
+                        }else if(producto.getCategoria().equals("Bebida")){
+                            total = (producto.getPrecio()*producto.getDisponibles());
+                            caja.setTotal(total, 0, "Bebida");
+                        }else if(producto.getCategoria().equals("Dulce")){
+                            total = (producto.getPrecio()*producto.getDisponibles());
+                            caja.setTotal(total, 0, "Dulce");
+                        }
+                        
+                    }
 
+
+
+
+                    System.out.println("Total de ventas: Q"+caja.getTotal(null));
+                    System.out.println("Ventas Snack: Q" + caja.getTotal("Snack"));
+                    System.out.println("Ventas Bebida: Q" + caja.getTotal("Bebida"));
+                    System.out.println("Ventas Dulces (con comision aplicada): Q" + caja.getTotal("Dulce"));
+                    System.out.println("\tCantidad de comision por Dulces: Q" + caja.getComision());
 
                     break;
                 case 5:
